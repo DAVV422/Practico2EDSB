@@ -11,8 +11,8 @@ public class Practico2 {
 
     public static void main(String[] args) throws ExcepcionClaveYaExiste, ExcepcionOrdenInvalido, ExcepcionClaveNoExiste {
         IArbolBusqueda<Integer, String> arbol;
-        //arbol = new ArbolMViasBusqueda<>();
-        arbol = new ArbolB<>();
+        arbol = new ArbolMViasBusqueda<>();
+        //arbol = new ArbolB<>();
         arbol.insertar(54, "Christian");
         arbol.insertar(65, "Liz");
         arbol.insertar(5, "Julio");
@@ -30,10 +30,10 @@ public class Practico2 {
         System.out.println("---------------------------------");
         System.out.println("Cantidad Nodos con Datos Vacios: "
                 +((ArbolMViasBusqueda)arbol).cantidadNodosConDatosVacios());
-        System.out.println("Cantidad Nodos con Datos Vacios en nivel N: "
+        System.out.println("Cantidad Nodos con Datos Vacios en nivel N (Nivel 1): "
                 +((ArbolMViasBusqueda)arbol).cantidadNodosConDatosVaciosEnNivelN(1));
-        System.out.println("Cantidad Nodos con Datos Vacios en nivel N: "
-                +((ArbolMViasBusqueda)arbol).cantidadNodosConDatosVaciosEnNivelNIterativo(1));        
+        System.out.println("Cantidad Nodos con Datos Vacios en nivel N (Nivel 2): "
+                +((ArbolMViasBusqueda)arbol).cantidadNodosConDatosVaciosEnNivelNIterativo(2));        
         System.out.println("¿Solo hay nodos hojas en el Ultimo Nivel("+ arbol.nivel() + ")?: " 
                 +((ArbolMViasBusqueda)arbol).soloHojasEnUltimoNviel());
         System.out.println("¿Arbol Balanceado?: " 
